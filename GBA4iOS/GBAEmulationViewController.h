@@ -20,6 +20,8 @@
 @property (weak, nonatomic) RPScreenRecorder *replayRecorder;
 @property (weak, nonatomic) RPPreviewViewController *previewViewController;
 
+@property (assign, nonatomic) BOOL isRecording;
+
 - (void)showSplashScreen;
 
 - (void)blurWithInitialAlpha:(CGFloat)alpha;
@@ -37,8 +39,8 @@
 
 - (void)launchGameWithCompletion:(void (^)(void))completionBlock;
 
-- (IBAction)startRecording:(UIButton *) sender;
-- (IBAction)stopRecording:(UIButton *) sender;
+- (void)startRecording:(id) sender;
+- (void)stopRecording:(id) sender;
 
 
 @end

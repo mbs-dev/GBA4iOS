@@ -122,6 +122,8 @@ static GBAEmulationViewController *_emulationViewController;
 {
     [super viewDidLoad];
     
+    self.isRecording = NO;
+    
 #if !(TARGET_IPHONE_SIMULATOR)
     self.emulatorScreen.backgroundColor = [UIColor blackColor]; // It's set to blue in the storyboard for easier visual debugging
 #endif
@@ -2840,7 +2842,7 @@ static GBAEmulationViewController *_emulationViewController;
 
 #pragma mark - ReplayKit Features
 
-- (IBAction)startRecordingButtonTapped:(UIButton *) sender
+- (void)startRecording:(id)sender
 {
     if (self.replayRecorder.available) {
     [self.replayRecorder startRecordingWithMicrophoneEnabled:true
@@ -2863,7 +2865,7 @@ static GBAEmulationViewController *_emulationViewController;
     
 }
 
-- (IBAction)stopRecordingButtonTapped:(UIButton *) sender
+- (void)stopRecording:(id)sender
 {
     [self pauseEmulation];
     [self.replayRecorder stopRecordingWithHandler:^(RPPreviewViewController * _Nullable previewViewController, NSError * _Nullable error) {
@@ -2911,6 +2913,21 @@ static GBAEmulationViewController *_emulationViewController;
         NSLog(@"Completed showing preview controller");
         [self resumeEmulation];
     }];
+}
+- (IBAction)recordSwitchChanged:(id)sender forEvent:(UIEvent *)event {
+    // Event throttling
+    if ([sender isOn] == self.isRecording) {
+        return;
+    }
+    
+    self.isRecording = [sender isOn];
+    
+    if (self.isRecording) {
+        [self startRecording:sender];
+    } else {
+        [self stopRecording:sender];
+    }
+    
 }
 
 @end
