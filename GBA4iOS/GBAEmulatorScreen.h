@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <ReplayKit/ReplayKit.h>
 
 #import "EAGLView_Private.h"
 
-@interface GBAEmulatorScreen : UIView
+@interface GBAEmulatorScreen : UIView <RPPreviewViewControllerDelegate>
 
 #if !(TARGET_IPHONE_SIMULATOR)
 @property (strong, nonatomic) EAGLView *eaglView;

@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ReplayKit/ReplayKit.h>
+
 #import "GBAROM.h"
 
-@interface GBAEmulationViewController : UIViewController
+@interface GBAEmulationViewController : UIViewController <RPScreenRecorderDelegate, RPPreviewViewControllerDelegate>
 
 @property (strong, nonatomic) GBAROM *rom;
 @property (assign, nonatomic) CGFloat blurAlpha;
 @property (strong, nonatomic) UIImageView *blurredContentsImageView;
+
+@property (weak, nonatomic) RPScreenRecorder *replayRecorder;
+@property (weak, nonatomic) RPPreviewViewController *previewViewController;
 
 - (void)showSplashScreen;
 
@@ -31,5 +36,9 @@
 - (void)autoSaveIfPossible;
 
 - (void)launchGameWithCompletion:(void (^)(void))completionBlock;
+
+- (IBAction)startRecording:(UIButton *) sender;
+- (IBAction)stopRecording:(UIButton *) sender;
+
 
 @end

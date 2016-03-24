@@ -67,7 +67,6 @@
     return success;
 }
 
-
 #pragma mark - Getters/Setters
 
 - (void)setEaglView:(UIView *)eaglView

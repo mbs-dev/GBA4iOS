@@ -12,6 +12,7 @@
 		1AD971E717D2B6EC007097BC /* GBAControllerSkinDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD971E617D2B6EC007097BC /* GBAControllerSkinDetailViewController.m */; };
 		1AD971F317D2C6ED007097BC /* GBAControllerSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD971F117D2C6ED007097BC /* GBAControllerSkin.m */; };
 		36BB379009474825B993FD0E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AFB44A5AB34C2982DE856F /* libPods.a */; };
+		8073E6761CA1A600008A2A17 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8073E6751CA1A600008A2A17 /* ReplayKit.framework */; };
 		BF02AFDB182F3E590031B8B6 /* GBASyncingOverviewViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF02AFDA182F3E590031B8B6 /* GBASyncingOverviewViewController.mm */; };
 		BF02AFDF182F6E200031B8B6 /* GBASyncingDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF02AFDE182F6E200031B8B6 /* GBASyncingDetailViewController.mm */; };
 		BF02D2C4197344950034A515 /* GBASoftwareUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF02D2C3197344950034A515 /* GBASoftwareUpdate.m */; };
@@ -488,6 +489,7 @@
 		1AD971F117D2C6ED007097BC /* GBAControllerSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBAControllerSkin.m; sourceTree = "<group>"; };
 		4A0F09D4E8E87AAE2BF774E2 /* Pods.ad hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods.ad hoc.xcconfig"; path = "Pods/Target Support Files/Pods/Pods.ad hoc.xcconfig"; sourceTree = "<group>"; };
 		4BC912A8C9F0C9806CCC83B8 /* Pods.jailbreak.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.jailbreak.xcconfig; path = "Pods/Target Support Files/Pods/Pods.jailbreak.xcconfig"; sourceTree = "<group>"; };
+		8073E6751CA1A600008A2A17 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 		8782243FD47ECE841FACE25A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		96AAF68A93CA1A6118EB130D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A1C556FA45115F5391A4909E /* Pods.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.enterprise.xcconfig; path = "Pods/Target Support Files/Pods/Pods.enterprise.xcconfig"; sourceTree = "<group>"; };
@@ -975,6 +977,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8073E6761CA1A600008A2A17 /* ReplayKit.framework in Frameworks */,
 				BF2638C618700E2400CE55F9 /* CoreMotion.framework in Frameworks */,
 				BF8789F818404AC800C81AB2 /* GameController.framework in Frameworks */,
 				CCC0F23317FA95C600235781 /* CoreMedia.framework in Frameworks */,
@@ -1536,6 +1539,7 @@
 		CC2D56FE1798F2EC00C616EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8073E6751CA1A600008A2A17 /* ReplayKit.framework */,
 				BFF7615119E731D800C403A0 /* libPods.a */,
 				BF7C0E68189DA30400794093 /* CrashReporter.framework */,
 				BF2638C518700E2400CE55F9 /* CoreMotion.framework */,

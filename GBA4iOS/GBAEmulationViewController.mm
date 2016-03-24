@@ -111,6 +111,8 @@ static GBAEmulationViewController *_emulationViewController;
         _emulationViewController = self;
         
         [[GBAEmulatorCore sharedCore] setDelegate:self];
+        
+        self.replayRecorder = [RPScreenRecorder sharedRecorder];
     }
     
     return self;
@@ -160,6 +162,8 @@ static GBAEmulationViewController *_emulationViewController;
     [self updateFilter];
     
     [self updateSettings:nil];
+    
+    self.replayRecorder.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -2834,6 +2838,80 @@ static GBAEmulationViewController *_emulationViewController;
     return (self.externalController != nil);
 }
 
+#pragma mark - ReplayKit Features
+
+- (IBAction)startRecordingButtonTapped:(UIButton *) sender
+{
+    if (self.replayRecorder.available) {
+    [self.replayRecorder startRecordingWithMicrophoneEnabled:true
+                                                     handler:^(NSError * error) {
+                                                         if (error != nil) {
+                                                             NSLog(@"%@",[error localizedDescription]);
+                                                             return;
+                                                         }
+                                                         NSLog(@"Started recording");
+                                                     }];
+    } else {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Screen recorder can't record videi"
+                                   message:@"Try to allow screen recorder to blahblah"
+                                  delegate:nil
+                         cancelButtonTitle:@"OK"
+                         otherButtonTitles: nil];
+        [alert show];
+    }
+    
+    
+}
+
+- (IBAction)stopRecordingButtonTapped:(UIButton *) sender
+{
+    [self pauseEmulation];
+    [self.replayRecorder stopRecordingWithHandler:^(RPPreviewViewController * _Nullable previewViewController, NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"%@",[error localizedDescription]);
+            return;
+        }
+        NSLog(@"Stopped recording");
+    
+        if (previewViewController != nil) {
+           [self presentViewController:previewViewController
+                              animated:true
+                            completion:nil];
+            self.previewViewController = previewViewController;
+            self.previewViewController.previewControllerDelegate = self;
+            
+        }
+    }];
+}
+
+- (void) screenRecorder:(RPScreenRecorder *)screenRecorder didStopRecordingWithError:(NSError *)error previewViewController:(RPPreviewViewController *)previewViewController {
+    
+    if (previewViewController) {
+        self.previewViewController = previewViewController;
+    }
+
+    NSLog(@"%@",[error localizedDescription]);
+
+    [self resumeEmulation];
+}
+
+- (void) screenRecorderDidChangeAvailability:(RPScreenRecorder *)screenRecorder {
+    NSLog(@"Changed availability of screen recorder: %i", screenRecorder.available);
+}
+
+- (void) previewController:(RPPreviewViewController *)previewController didFinishWithActivityTypes:(NSSet<NSString *> *)activityTypes {
+    [previewController dismissViewControllerAnimated:true completion:^{
+        NSLog(@"Completed showing preview controller");
+        [self resumeEmulation];
+    }];
+}
+
+- (void) previewControllerDidFinish:(RPPreviewViewController *)previewController {
+    [previewController dismissViewControllerAnimated:true completion:^{
+        NSLog(@"Completed showing preview controller");
+        [self resumeEmulation];
+    }];
+}
 
 @end
 
