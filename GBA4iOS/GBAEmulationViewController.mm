@@ -166,6 +166,7 @@ static GBAEmulationViewController *_emulationViewController;
     [self updateSettings:nil];
     
     self.replayRecorder.delegate = self;
+    self.recordButton.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -2840,32 +2841,31 @@ static GBAEmulationViewController *_emulationViewController;
     return (self.externalController != nil);
 }
 
-#pragma mark - ReplayKit Features
+#pragma mark - Screen recording features
 
-- (void)startRecording:(id)sender
+- (void)startRecording
 {
     if (self.replayRecorder.available) {
-    [self.replayRecorder startRecordingWithMicrophoneEnabled:true
-                                                     handler:^(NSError * error) {
-                                                         if (error != nil) {
-                                                             NSLog(@"%@",[error localizedDescription]);
-                                                             return;
-                                                         }
-                                                         NSLog(@"Started recording");
-                                                     }];
+        [self.replayRecorder startRecordingWithMicrophoneEnabled:true
+                                                         handler:^(NSError * error) {
+                                                             if (error != nil) {
+                                                                 NSLog(@"%@",[error localizedDescription]);
+                                                                 return;
+                                                             }
+                                                             NSLog(@"Started recording");
+                                                         }];
     } else {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Screen recorder can't record videi"
-                                   message:@"Try to allow screen recorder to blahblah"
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Can't record video in this mode", @"")
+                                   message:NSLocalizedString(@"Try to turn out AirPlay and try again.", @"")
                                   delegate:nil
-                         cancelButtonTitle:@"OK"
+                         cancelButtonTitle:NSLocalizedString(@"OK", @"")
                          otherButtonTitles: nil];
         [alert show];
+        [self.recordButton setState:NO];
     }
-    
-    
 }
 
-- (void)stopRecording:(id)sender
+- (void)stopRecording
 {
     [self pauseEmulation];
     [self.replayRecorder stopRecordingWithHandler:^(RPPreviewViewController * _Nullable previewViewController, NSError * _Nullable error) {
@@ -2914,22 +2914,6 @@ static GBAEmulationViewController *_emulationViewController;
         [self resumeEmulation];
     }];
 }
-- (IBAction)recordSwitchChanged:(id)sender forEvent:(UIEvent *)event {
-    // Event throttling
-    if ([sender isOn] == self.isRecording) {
-        return;
-    }
-    
-    self.isRecording = [sender isOn];
-    
-    if (self.isRecording) {
-        [self startRecording:sender];
-    } else {
-        [self stopRecording:sender];
-    }
-    
-}
-
 @end
 
 

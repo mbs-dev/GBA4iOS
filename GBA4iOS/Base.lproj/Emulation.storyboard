@@ -182,38 +182,40 @@
                                         <rect key="frame" x="0.0" y="54" width="320" height="220"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="75P-ZV-Rv0">
-                                        <rect key="frame" x="136" y="15" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="recordSwitchChanged:forEvent:" destination="rpU-xN-eyA" eventType="valueChanged" id="kLB-AK-q9q"/>
-                                        </connections>
-                                    </switch>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ydJ-RZ-Bvq" customClass="GBARecordButton">
-                                        <rect key="frame" x="217" y="15" width="60" height="22"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" button="YES"/>
-                                        </accessibility>
+                                    <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OtO-vm-bS6" userLabel="Label" customClass="GBARecordButton">
+                                        <rect key="frame" x="198" y="15" width="72" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFz-As-yO0">
+                                                <rect key="frame" x="31" y="5" width="33" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorOn">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.29738685344827587" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorOff">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.18995150862068966" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColorOn">
+                                                <color key="value" red="1" green="0.0" blue="0.0" alpha="0.65530711206896552" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColorOff">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.19380387931034479" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="3"/>
+                                                <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="roundBorderRadius">
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorOn">
-                                                <color key="value" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorOff">
-                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="on" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColorOn">
-                                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColorOff">
-                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="state" value="NO"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="recLabel" destination="MFz-As-yO0" id="6ms-bM-Tfc"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -243,6 +245,7 @@
                         <outlet property="controllerView" destination="3X0-Mp-OVJ" id="MXy-Gj-cDs"/>
                         <outlet property="emulatorScreen" destination="KTg-3r-eIu" id="T1r-be-SwC"/>
                         <outlet property="portraitBottomLayoutConstraint" destination="DRo-HN-e9g" id="1Qo-bT-MAW"/>
+                        <outlet property="recordButton" destination="OtO-vm-bS6" id="QID-nE-NLH"/>
                         <outlet property="screenContainerView" destination="nSu-0n-xp1" id="19d-dd-iNL"/>
                         <outlet property="screenHorizontalCenterLayoutConstraint" destination="a61-8Q-JV9" id="K6g-DJ-YRw"/>
                         <outlet property="screenVerticalCenterLayoutConstraint" destination="X71-hi-JIS" id="2uP-Hl-nvF"/>

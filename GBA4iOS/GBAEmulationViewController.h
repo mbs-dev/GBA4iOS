@@ -10,13 +10,15 @@
 #import <ReplayKit/ReplayKit.h>
 
 #import "GBAROM.h"
+#import "GBARecordButton.h"
 
-@interface GBAEmulationViewController : UIViewController <RPScreenRecorderDelegate, RPPreviewViewControllerDelegate>
+@interface GBAEmulationViewController : UIViewController <RPScreenRecorderDelegate, RPPreviewViewControllerDelegate, GBARecordButtonDelegate>
 
 @property (strong, nonatomic) GBAROM *rom;
 @property (assign, nonatomic) CGFloat blurAlpha;
 @property (strong, nonatomic) UIImageView *blurredContentsImageView;
 
+@property (weak, nonatomic) IBOutlet GBARecordButton *recordButton;
 @property (weak, nonatomic) RPScreenRecorder *replayRecorder;
 @property (weak, nonatomic) RPPreviewViewController *previewViewController;
 
@@ -39,8 +41,8 @@
 
 - (void)launchGameWithCompletion:(void (^)(void))completionBlock;
 
-- (void)startRecording:(id) sender;
-- (void)stopRecording:(id) sender;
+- (IBAction) startRecording:(id) sender;
+- (IBAction) stopRecording:(id) sender;
 
 
 @end

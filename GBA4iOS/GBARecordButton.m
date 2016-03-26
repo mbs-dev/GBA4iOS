@@ -12,45 +12,61 @@
 
 # pragma mark - Drawing functions
 
-
 - (void)drawRect:(CGRect)rect {
+    [[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.0] setFill];
+    UIRectFill(rect);
+
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSaveGState(context);
-    
-    UIBezierPath* border = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(rect, self.borderWidth, self.borderWidth) cornerRadius:self.roundBorderRadius];
-    
-    CGContextSetStrokeColorWithColor(context, [self.on?self.borderColorOn:self.borderColorOff CGColor]);
+    CGRect insetRect = CGRectInset(rect, self.borderWidth * 0.5, self.borderWidth * 0.5);
+    const UIBezierPath* border = [UIBezierPath bezierPathWithRoundedRect:insetRect cornerRadius:self.roundBorderRadius];
+    CGColorRef strokeColor = self.state?[self.borderColorOn CGColor]:[self.borderColorOff CGColor];
+    CGContextSetLineWidth(context, self.borderWidth);
+    CGContextSetStrokeColorWithColor(context, strokeColor);
     [border stroke];
     
-    CGContextRestoreGState(context);
-    
-    CGColorRef circleColor = [self.on?self.circleColorOn:self.circleColorOff CGColor];
+    CGColorRef circleColor = self.state?[self.circleColorOn CGColor ]:[self.circleColorOff CGColor];
     CGContextSetFillColorWithColor(context, circleColor);
-    CGContextSetStrokeColorWithColor(context, [self.on?self.circleColorOn:self.circleColorOff CGColor]);
-    
-    CGContextAddArc(context, 8.0, 8.0, 6.0, 0.0, M_PI * 2, YES);
+    CGContextSetStrokeColorWithColor(context, circleColor);
+    CGFloat radius = insetRect.size.height * 0.5 * 0.5;
+    CGFloat circleX = rect.size.height * 0.5 + radius * 0.5;
+    CGFloat circleY = rect.size.height * 0.5;
+    CGContextAddArc(context, circleX, circleY, radius, 0.0, M_PI * 2, YES);
     CGContextFillPath(context);
-    
-    CGContextRestoreGState(context);
-    
-    
+
+    CGRect textRect = CGRectInset(insetRect, circleX + radius * 0.5 + circleX, 1.0);
+
+    [self.recLabel setTextColor:(self.state?self.circleColorOn:self.borderColorOff)];
 }
 
 
--(BOOL) isOn {
-    return self.on == YES;
-}
+# pragma mark - Logic of the control
 
-# pragma mark - Component logic
+- (BOOL) isOn {
+    return self.state == YES;
+}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches
            withEvent:(UIEvent *)event {
-    self.on = !self.on;
+    [super touchesBegan:touches withEvent:event];
+
+    self.state = !self.state;
     
-    if (self.on) {
-        
+    if (self.delegate != nil) {
+        if (self.state) {
+            [self.delegate startRecording];
+        } else {
+            [self.delegate stopRecording];
+        }
     }
+}
+
+- (void) setState:(BOOL)newState {
+    if ([self isOn] == newState) {
+        return;
+    }
+    
+    _state = newState;
+    [self setNeedsDisplay];
 }
 
 @end
