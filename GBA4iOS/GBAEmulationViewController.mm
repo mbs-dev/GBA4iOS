@@ -2843,6 +2843,28 @@ static GBAEmulationViewController *_emulationViewController;
 
 #pragma mark - Screen recording features
 
+- (void) displayRecordingErrorAlertWithTitle:(NSString*) title andMessage:(NSString*) message {
+    [self pauseEmulation];
+    [self.recordButton setState:NO];
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+                                                              [self resumeEmulation];
+                                                          }];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void) handleRecordingError:(NSError*) error {
+    [self displayRecordingErrorAlertWithTitle:@"Error occured during recording the video" andMessage:[error localizedDescription]];
+}
+
 - (void)startRecording
 {
     if (self.replayRecorder.available) {
@@ -2850,18 +2872,14 @@ static GBAEmulationViewController *_emulationViewController;
                                                          handler:^(NSError * error) {
                                                              if (error != nil) {
                                                                  NSLog(@"%@",[error localizedDescription]);
+                                                                 [self handleRecordingError:error];
                                                                  return;
                                                              }
                                                              NSLog(@"Started recording");
                                                          }];
     } else {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Can't record video in this mode", @"")
-                                   message:NSLocalizedString(@"Try to turn out AirPlay and try again.", @"")
-                                  delegate:nil
-                         cancelButtonTitle:NSLocalizedString(@"OK", @"")
-                         otherButtonTitles: nil];
-        [alert show];
-        [self.recordButton setState:NO];
+        [self displayRecordingErrorAlertWithTitle:NSLocalizedString(@"Can't record video in this mode", @"")
+                                       andMessage:NSLocalizedString(@"Try to turn off AirPlay or QuickTime recording and try again.", @"")];
     }
 }
 
@@ -2870,7 +2888,7 @@ static GBAEmulationViewController *_emulationViewController;
     [self pauseEmulation];
     [self.replayRecorder stopRecordingWithHandler:^(RPPreviewViewController * _Nullable previewViewController, NSError * _Nullable error) {
         if (error != nil) {
-            NSLog(@"%@",[error localizedDescription]);
+            [self handleRecordingError:error];
             return;
         }
         NSLog(@"Stopped recording");
@@ -2891,8 +2909,12 @@ static GBAEmulationViewController *_emulationViewController;
     if (previewViewController) {
         self.previewViewController = previewViewController;
     }
-
-    NSLog(@"%@",[error localizedDescription]);
+    
+    if (error != nil) {
+        NSLog(@"%@",[error localizedDescription]);
+        [self handleRecordingError:error];
+        return;
+    }
 
     [self resumeEmulation];
 }
@@ -2903,14 +2925,12 @@ static GBAEmulationViewController *_emulationViewController;
 
 - (void) previewController:(RPPreviewViewController *)previewController didFinishWithActivityTypes:(NSSet<NSString *> *)activityTypes {
     [previewController dismissViewControllerAnimated:true completion:^{
-        NSLog(@"Completed showing preview controller");
         [self resumeEmulation];
     }];
 }
 
 - (void) previewControllerDidFinish:(RPPreviewViewController *)previewController {
     [previewController dismissViewControllerAnimated:true completion:^{
-        NSLog(@"Completed showing preview controller");
         [self resumeEmulation];
     }];
 }
