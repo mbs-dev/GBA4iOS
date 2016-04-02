@@ -53,9 +53,9 @@
     
     if (self.delegate != nil) {
         if (self.state) {
-            [self.delegate startRecording];
+            [self.delegate startRecording:self];
         } else {
-            [self.delegate stopRecording];
+            [self.delegate stopRecording:self];
         }
     }
 }

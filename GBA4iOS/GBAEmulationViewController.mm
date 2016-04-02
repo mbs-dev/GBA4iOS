@@ -1933,6 +1933,8 @@ static GBAEmulationViewController *_emulationViewController;
     {
         [self.pausedActionSheet dismissWithClickedButtonIndex:0 animated:NO];
     }
+    
+    [self.view bringSubviewToFront:self.emulatorScreen];
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
@@ -2213,6 +2215,9 @@ static GBAEmulationViewController *_emulationViewController;
     {
         [self updateEmulatorScreenFrame];
     }
+    
+    [self.view bringSubviewToFront:self.recordButton];
+
 }
 
 #pragma mark - Emulation
@@ -2865,7 +2870,7 @@ static GBAEmulationViewController *_emulationViewController;
     [self displayRecordingErrorAlertWithTitle:@"Error occured during recording the video" andMessage:[error localizedDescription]];
 }
 
-- (void)startRecording
+- (IBAction)startRecording:(id)sender
 {
     if (self.replayRecorder.available) {
         [self.replayRecorder startRecordingWithMicrophoneEnabled:true
@@ -2883,7 +2888,7 @@ static GBAEmulationViewController *_emulationViewController;
     }
 }
 
-- (void)stopRecording
+- (IBAction)stopRecording:(id)sender
 {
     [self pauseEmulation];
     [self.replayRecorder stopRecordingWithHandler:^(RPPreviewViewController * _Nullable previewViewController, NSError * _Nullable error) {

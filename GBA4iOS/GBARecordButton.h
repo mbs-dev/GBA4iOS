@@ -12,8 +12,8 @@ IB_DESIGNABLE
 
 @protocol GBARecordButtonDelegate
 
-- (void) startRecording;
-- (void) stopRecording;
+- (IBAction) startRecording:(id) sender;
+- (IBAction) stopRecording:(id) sender;
 
 @end
 

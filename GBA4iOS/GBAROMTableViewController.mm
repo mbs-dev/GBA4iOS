@@ -985,8 +985,10 @@ dispatch_queue_t directoryContentsChangedQueue() {
 
 - (void)hideNoGamesView
 {
-    self.tableView.backgroundView = nil;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    dispatch_async(dispatch_get_main_queue(), ^(void){
+        self.tableView.backgroundView = nil;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    });
 }
 
 #pragma mark - UITableView Delegate

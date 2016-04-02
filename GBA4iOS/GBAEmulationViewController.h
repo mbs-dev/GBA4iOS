@@ -41,8 +41,8 @@
 
 - (void)launchGameWithCompletion:(void (^)(void))completionBlock;
 
-- (IBAction) startRecording:(id) sender;
-- (IBAction) stopRecording:(id) sender;
+- (IBAction)startRecording:(id) sender;
+- (IBAction)stopRecording:(id) sender;
 
 
 @end
