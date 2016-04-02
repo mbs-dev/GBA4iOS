@@ -28,6 +28,7 @@
 
 #import <GameController/GameController.h>
 #import <AVFoundation/AVFoundation.h>
+#import "GBAAnalyticsTracker.h"
 
 #import "GBAEmulatorCore.h"
 #import "GBALinkManager.h"
@@ -2868,6 +2869,11 @@ static GBAEmulationViewController *_emulationViewController;
 
 - (void) handleRecordingError:(NSError*) error {
     [self displayRecordingErrorAlertWithTitle:@"Error occured during recording the video" andMessage:[error localizedDescription]];
+    
+    [GBAAnalyticsTracker trackEventWithCategory:@"Screen recording"
+                                         action:@"Error appeared"
+                                          label:[error localizedDescription]];
+
 }
 
 - (IBAction)startRecording:(id)sender
@@ -2929,6 +2935,18 @@ static GBAEmulationViewController *_emulationViewController;
 }
 
 - (void) previewController:(RPPreviewViewController *)previewController didFinishWithActivityTypes:(NSSet<NSString *> *)activityTypes {
+    if (activityTypes.count > 0) {
+        NSString* activitiesExplanation = [[activityTypes allObjects] componentsJoinedByString:@","];
+        
+        [GBAAnalyticsTracker trackEventWithCategory:@"Screen recording"
+                                             action:@"User ended preview and saved or shared"
+                                              label:activitiesExplanation];
+    } else {
+        [GBAAnalyticsTracker trackEventWithCategory:@"Screen recording"
+                                             action:@"User ended preview"
+                                              label:@"User skipped saving or sharing video"];
+    }
+    
     [previewController dismissViewControllerAnimated:true completion:^{
         [self resumeEmulation];
     }];

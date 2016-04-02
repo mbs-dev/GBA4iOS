@@ -7,6 +7,7 @@
 //
 
 #import "GBARecordButton.h"
+#import "GBAAnalyticsTracker.h"
 
 @implementation GBARecordButton
 
@@ -53,8 +54,16 @@
     
     if (self.delegate != nil) {
         if (self.state) {
+            [GBAAnalyticsTracker trackEventWithCategory:@"Screen recording"
+                                                 action:@"Started"
+                                                  label:@"Started Screen recording via Record button"];
+            
             [self.delegate startRecording:self];
         } else {
+            [GBAAnalyticsTracker trackEventWithCategory:@"Screen recording"
+                                                 action:@"Stopped"
+                                                  label:@"Stopped Screen recording via Record button"];
+
             [self.delegate stopRecording:self];
         }
     }
