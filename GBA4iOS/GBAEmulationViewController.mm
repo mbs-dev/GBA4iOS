@@ -175,6 +175,8 @@ static GBAEmulationViewController *_emulationViewController;
     [super viewWillAppear:animated];
     
     [self refreshLayout];
+    
+    [GBAAnalyticsTracker trackScreenWithName:@"Emulation View"];
 }
 
 - (void)viewDidAppear:(BOOL)animated
