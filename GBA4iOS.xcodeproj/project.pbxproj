@@ -12,11 +12,18 @@
 		1AD971E717D2B6EC007097BC /* GBAControllerSkinDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD971E617D2B6EC007097BC /* GBAControllerSkinDetailViewController.m */; };
 		1AD971F317D2C6ED007097BC /* GBAControllerSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD971F117D2C6ED007097BC /* GBAControllerSkin.m */; };
 		36BB379009474825B993FD0E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AFB44A5AB34C2982DE856F /* libPods.a */; };
-
+		8062247F1CB564520051BD49 /* GBAOnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8062247E1CB564520051BD49 /* GBAOnboardingViewController.m */; };
+		806224811CB586CF0051BD49 /* onboarding-recbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 806224801CB586CF0051BD49 /* onboarding-recbutton@2x.png */; };
+		806224831CB5E0E30051BD49 /* onboarding-buildstore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 806224821CB5E0E30051BD49 /* onboarding-buildstore@2x.png */; };
 		8073E6761CA1A600008A2A17 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8073E6751CA1A600008A2A17 /* ReplayKit.framework */; };
-		80EA00FF1CA5E1D1001909C0 /* GBARecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EA00FD1CA5E1D1001909C0 /* GBARecordButton.m */; };
+		807E55F31CB1645D00165E81 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807E55F21CB1645D00165E81 /* MediaPlayer.framework */; };
+		808E15521CB455DF002EBC96 /* onboarding-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 808E15501CB455DF002EBC96 /* onboarding-background.png */; };
+		808E15551CB493AD002EBC96 /* onboarding-gamepads@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 808E15541CB493AD002EBC96 /* onboarding-gamepads@2x.png */; };
+		808E15571CB49751002EBC96 /* onboarding-roms@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 808E15561CB49751002EBC96 /* onboarding-roms@2x.png */; };
+		808E15591CB499B1002EBC96 /* onboarding-welcome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 808E15581CB499B1002EBC96 /* onboarding-welcome@2x.png */; };
 		80E8A8F81CA9568F00DEA965 /* GBAAnalyticsTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E8A8F71CA9568F00DEA965 /* GBAAnalyticsTracker.m */; };
 		80E8A8FA1CA95DA100DEA965 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80E8A8F91CA95DA100DEA965 /* GoogleService-Info.plist */; };
+		80EA00FF1CA5E1D1001909C0 /* GBARecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EA00FD1CA5E1D1001909C0 /* GBARecordButton.m */; };
 		BF02AFDB182F3E590031B8B6 /* GBASyncingOverviewViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF02AFDA182F3E590031B8B6 /* GBASyncingOverviewViewController.mm */; };
 		BF02AFDF182F6E200031B8B6 /* GBASyncingDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF02AFDE182F6E200031B8B6 /* GBASyncingDetailViewController.mm */; };
 		BF02D2C4197344950034A515 /* GBASoftwareUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF02D2C3197344950034A515 /* GBASoftwareUpdate.m */; };
@@ -493,13 +500,22 @@
 		1AD971F117D2C6ED007097BC /* GBAControllerSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBAControllerSkin.m; sourceTree = "<group>"; };
 		4A0F09D4E8E87AAE2BF774E2 /* Pods.ad hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods.ad hoc.xcconfig"; path = "Pods/Target Support Files/Pods/Pods.ad hoc.xcconfig"; sourceTree = "<group>"; };
 		4BC912A8C9F0C9806CCC83B8 /* Pods.jailbreak.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.jailbreak.xcconfig; path = "Pods/Target Support Files/Pods/Pods.jailbreak.xcconfig"; sourceTree = "<group>"; };
+		8062247D1CB564520051BD49 /* GBAOnboardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBAOnboardingViewController.h; sourceTree = "<group>"; };
+		8062247E1CB564520051BD49 /* GBAOnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBAOnboardingViewController.m; sourceTree = "<group>"; };
+		806224801CB586CF0051BD49 /* onboarding-recbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding-recbutton@2x.png"; sourceTree = "<group>"; };
+		806224821CB5E0E30051BD49 /* onboarding-buildstore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding-buildstore@2x.png"; sourceTree = "<group>"; };
 		8073E6751CA1A600008A2A17 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
-		80EA00FD1CA5E1D1001909C0 /* GBARecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBARecordButton.m; sourceTree = "<group>"; };
-		80EA00FE1CA5E1D1001909C0 /* GBARecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBARecordButton.h; sourceTree = "<group>"; };
-		80EA01011CA5EA49001909C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Emulation.strings; sourceTree = "<group>"; };
+		807E55F21CB1645D00165E81 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		808E15501CB455DF002EBC96 /* onboarding-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding-background.png"; sourceTree = "<group>"; };
+		808E15541CB493AD002EBC96 /* onboarding-gamepads@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding-gamepads@2x.png"; sourceTree = "<group>"; };
+		808E15561CB49751002EBC96 /* onboarding-roms@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding-roms@2x.png"; sourceTree = "<group>"; };
+		808E15581CB499B1002EBC96 /* onboarding-welcome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding-welcome@2x.png"; sourceTree = "<group>"; };
 		80E8A8F61CA9568F00DEA965 /* GBAAnalyticsTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBAAnalyticsTracker.h; sourceTree = "<group>"; };
 		80E8A8F71CA9568F00DEA965 /* GBAAnalyticsTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBAAnalyticsTracker.m; sourceTree = "<group>"; };
 		80E8A8F91CA95DA100DEA965 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		80EA00FD1CA5E1D1001909C0 /* GBARecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBARecordButton.m; sourceTree = "<group>"; };
+		80EA00FE1CA5E1D1001909C0 /* GBARecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBARecordButton.h; sourceTree = "<group>"; };
+		80EA01011CA5EA49001909C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Emulation.strings; sourceTree = "<group>"; };
 		8782243FD47ECE841FACE25A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		96AAF68A93CA1A6118EB130D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A1C556FA45115F5391A4909E /* Pods.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.enterprise.xcconfig; path = "Pods/Target Support Files/Pods/Pods.enterprise.xcconfig"; sourceTree = "<group>"; };
@@ -987,6 +1003,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807E55F31CB1645D00165E81 /* MediaPlayer.framework in Frameworks */,
 				8073E6761CA1A600008A2A17 /* ReplayKit.framework in Frameworks */,
 				BF2638C618700E2400CE55F9 /* CoreMotion.framework in Frameworks */,
 				BF8789F818404AC800C81AB2 /* GameController.framework in Frameworks */,
@@ -1023,17 +1040,29 @@
 			name = "Controller Skins";
 			sourceTree = "<group>";
 		};
-
-		80EA00FC1CA5E1BC001909C0 /* Screen Recording */ = {
+		807E55F41CB164C000165E81 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				80EA00FD1CA5E1D1001909C0 /* GBARecordButton.m */,
-				80EA00FE1CA5E1D1001909C0 /* GBARecordButton.h */,
+				808E154D1CB45168002EBC96 /* Assets */,
+				8062247D1CB564520051BD49 /* GBAOnboardingViewController.h */,
+				8062247E1CB564520051BD49 /* GBAOnboardingViewController.m */,
 			);
-			name = "Screen Recording";
+			name = Onboarding;
 			sourceTree = "<group>";
 		};
-
+		808E154D1CB45168002EBC96 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				806224821CB5E0E30051BD49 /* onboarding-buildstore@2x.png */,
+				806224801CB586CF0051BD49 /* onboarding-recbutton@2x.png */,
+				808E15581CB499B1002EBC96 /* onboarding-welcome@2x.png */,
+				808E15561CB49751002EBC96 /* onboarding-roms@2x.png */,
+				808E15541CB493AD002EBC96 /* onboarding-gamepads@2x.png */,
+				808E15501CB455DF002EBC96 /* onboarding-background.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		80E8A8FB1CA95DAB00DEA965 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
@@ -1044,7 +1073,15 @@
 			name = Analytics;
 			sourceTree = "<group>";
 		};
-
+		80EA00FC1CA5E1BC001909C0 /* Screen Recording */ = {
+			isa = PBXGroup;
+			children = (
+				80EA00FD1CA5E1D1001909C0 /* GBARecordButton.m */,
+				80EA00FE1CA5E1D1001909C0 /* GBARecordButton.h */,
+			);
+			name = "Screen Recording";
+			sourceTree = "<group>";
+		};
 		BF02AFD8182F3E3A0031B8B6 /* Syncing */ = {
 			isa = PBXGroup;
 			children = (
@@ -1571,6 +1608,7 @@
 		CC2D56FE1798F2EC00C616EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				807E55F21CB1645D00165E81 /* MediaPlayer.framework */,
 				8073E6751CA1A600008A2A17 /* ReplayKit.framework */,
 				BFF7615119E731D800C403A0 /* libPods.a */,
 				BF7C0E68189DA30400794093 /* CrashReporter.framework */,
@@ -1600,6 +1638,7 @@
 		CC2D57051798F2EC00C616EB /* GBA4iOS */ = {
 			isa = PBXGroup;
 			children = (
+				807E55F41CB164C000165E81 /* Onboarding */,
 				CC2D570E1798F2EC00C616EB /* GBAAppDelegate.h */,
 				CC2D570F1798F2EC00C616EB /* GBAAppDelegate.mm */,
 				CC2D573F1798F44700C616EB /* GBAROMTableViewController.h */,
@@ -2144,10 +2183,14 @@
 				BFB89E4318909EE8002E5F26 /* Default-Portrait@2x~ipad.png in Resources */,
 				CC58C8F817E64A20008F472E /* Emulation.storyboard in Resources */,
 				BFB89E4118909EE8002E5F26 /* Default-Landscape~ipad.png in Resources */,
+				808E15571CB49751002EBC96 /* onboarding-roms@2x.png in Resources */,
 				BFFA355217ECD2A70038D34F /* Default.gbaskin in Resources */,
+				808E15551CB493AD002EBC96 /* onboarding-gamepads@2x.png in Resources */,
 				BFB89E3D18909EE8002E5F26 /* Default-568h@2x.png in Resources */,
+				806224831CB5E0E30051BD49 /* onboarding-buildstore@2x.png in Resources */,
 				CC58C8FC17E64A91008F472E /* xButton.png in Resources */,
 				BF359B9B187A6A8200B4CA53 /* eventDistributionROMs.plist in Resources */,
+				806224811CB586CF0051BD49 /* onboarding-recbutton@2x.png in Resources */,
 				BF60A17118A61D8700B2E7D4 /* betaTesters.plist in Resources */,
 				BF0EBB1119C026E500703623 /* Launch Screen.xib in Resources */,
 				BFB89E3F18909EE8002E5F26 /* Default-Landscape@2x~ipad.png in Resources */,
@@ -2156,6 +2199,7 @@
 				BF3B2B6B1A2E3F3300301AE1 /* Localizable.strings in Resources */,
 				BF8C11431A2D01DF00126A3D /* GBANoGamesView.xib in Resources */,
 				1A5BAE7F17D04B0A00BABC01 /* overlays128.png in Resources */,
+				808E15591CB499B1002EBC96 /* onboarding-welcome@2x.png in Resources */,
 				CC5044E71814C474009F7B9E /* Default.gbcskin in Resources */,
 				80E8A8FA1CA95DA100DEA965 /* GoogleService-Info.plist in Resources */,
 				BFBA77BA19B715E1000E8425 /* Acknowledgements.html in Resources */,
@@ -2164,6 +2208,7 @@
 				BFB89E4518909EE8002E5F26 /* Default-Portrait~ipad.png in Resources */,
 				BF40C33019E09974003C73B5 /* Intro.mp4 in Resources */,
 				BF8C11471A2D01ED00126A3D /* Settings.storyboard in Resources */,
+				808E15521CB455DF002EBC96 /* onboarding-background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2506,6 +2551,7 @@
 				BFD03A9E1898E877001056A5 /* GBAEvent.m in Sources */,
 				CC5044F31814DC69009F7B9E /* GBA-thumb.cpp in Sources */,
 				BFADD3D719C1563E0010AC9F /* SocketUDP.cpp in Sources */,
+				8062247F1CB564520051BD49 /* GBAOnboardingViewController.m in Sources */,
 				CC5044F91814DC69009F7B9E /* Mode2.cpp in Sources */,
 				CC9EA6CD17FE7FC3005BD5E6 /* UITableViewController+Theming.m in Sources */,
 				BF0EBB1F19C05D1000703623 /* GBASettingsTableViewCell.m in Sources */,

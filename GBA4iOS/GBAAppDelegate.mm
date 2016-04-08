@@ -24,6 +24,8 @@
 
 #import "GBAAnalyticsTracker.h"
 
+#import "GBAOnboardingViewController.h"
+
 #import "UIView+DTDebug.h"
 #import "NSDate+Comparing.h"
 #import "UIAlertView+RSTAdditions.h"
@@ -57,6 +59,9 @@ static GBAAppDelegate *_appDelegate;
 
 @end
 
+
+static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
+
 @implementation GBAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -70,19 +75,7 @@ static GBAAppDelegate *_appDelegate;
     
     [[UISwitch appearance] setOnTintColor:GBA4iOS_PURPLE_COLOR]; // Apparently UISwitches don't inherit tint color from superview
     
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-    {
-        self.emulationViewController = [[GBAEmulationViewController alloc] init];
-        
-        self.window.rootViewController = self.emulationViewController;
-    }
-    else
-    {
-        GBASplitViewController *splitViewController = [GBASplitViewController appropriateSplitViewController];
-        self.window.rootViewController = splitViewController;
-        
-        self.emulationViewController = splitViewController.emulationViewController;
-    }
+    [self setupRootViewController];
     
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
@@ -117,6 +110,42 @@ static GBAAppDelegate *_appDelegate;
     [self.emulationViewController showSplashScreen];
     
     return YES;
+}
+
+- (void)setupRootViewController {
+    BOOL userHasOnboarded = [[NSUserDefaults standardUserDefaults] boolForKey:kUserHasOnboardedKey];
+    
+    if (userHasOnboarded) {
+        [self setupNormalViewController];
+        return;
+    }
+    
+    self.window.rootViewController = [[GBAOnboardingViewController alloc] initWithSkipHandler:^{
+        [GBAAnalyticsTracker trackEventWithCategory:@"Onboarding" action:@"Onboarding Skipped" label:@"User skipped onboarding"];
+        [self setupNormalViewController];
+    }];
+    
+    [GBAAnalyticsTracker trackEventWithCategory:@"Onboarding" action:@"Onboarding Started" label:@"Onboarding appeared"];
+}
+
+- (void)setupNormalViewController {
+    // set that we have completed onboarding so we only do it once... for demo
+    // purposes we don't want to have to set this every time so I'll just leave
+    // this here...
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserHasOnboardedKey];
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+    {
+        self.emulationViewController = [[GBAEmulationViewController alloc] init];
+        self.window.rootViewController = self.emulationViewController;
+    }
+    else
+    {
+        GBASplitViewController *splitViewController = [GBASplitViewController appropriateSplitViewController];
+        self.window.rootViewController = splitViewController;
+        
+        self.emulationViewController = splitViewController.emulationViewController;
+    }
 }
 
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation

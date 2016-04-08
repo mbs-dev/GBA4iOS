@@ -173,10 +173,6 @@ static GBAEmulationViewController *_emulationViewController;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [self refreshLayout];
-    
-    [GBAAnalyticsTracker trackScreenWithName:@"Emulation View"];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -191,6 +187,7 @@ static GBAEmulationViewController *_emulationViewController;
     {
         // Keep this here, used when we programmatically dismiss view controllers presented by custom transition view controllers (ex: add cheat on top of cheats menu)
         [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+        [GBAAnalyticsTracker trackScreenWithName:@"Emulation View"];
     }
 }
 
@@ -213,6 +210,7 @@ static GBAEmulationViewController *_emulationViewController;
         self.romTableViewController = [[GBAROMTableViewController alloc] initWithNibName:nil bundle:nil];
         self.romTableViewController.appearanceDelegate = self;
         self.romTableViewController.view.layer.allowsGroupOpacity = YES;
+
         
         UINavigationController *navigationController = RST_CONTAIN_IN_NAVIGATION_CONTROLLER(self.romTableViewController);
         navigationController.modalPresentationStyle = UIModalPresentationCustom;
@@ -2220,7 +2218,7 @@ static GBAEmulationViewController *_emulationViewController;
     }
     
     [self.view bringSubviewToFront:self.recordButton];
-
+    [self.view bringSubviewToFront:self.buildsioLabel];
 }
 
 #pragma mark - Emulation
@@ -2824,6 +2822,10 @@ static GBAEmulationViewController *_emulationViewController;
                 }
                 
             }
+            
+            [self.buildsioLabel setHidden:NO];
+            self.buildsioLabel.hidden = NO;
+            
         }
         else
         {

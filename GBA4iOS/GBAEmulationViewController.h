@@ -19,6 +19,8 @@
 @property (strong, nonatomic) UIImageView *blurredContentsImageView;
 
 @property (weak, nonatomic) IBOutlet GBARecordButton *recordButton;
+@property (weak, nonatomic) IBOutlet UILabel *buildsioLabel;
+
 @property (weak, nonatomic) RPScreenRecorder *replayRecorder;
 @property (weak, nonatomic) RPPreviewViewController *previewViewController;
 
