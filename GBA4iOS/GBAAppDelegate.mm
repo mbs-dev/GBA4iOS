@@ -126,6 +126,8 @@ static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
     }];
     
     [GBAAnalyticsTracker trackEventWithCategory:@"Onboarding" action:@"Onboarding Started" label:@"Onboarding appeared"];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:kUserHasOnboardedKey];
 }
 
 - (void)setupNormalViewController {
