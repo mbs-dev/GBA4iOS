@@ -168,7 +168,8 @@ static GBAEmulationViewController *_emulationViewController;
     
     self.replayRecorder.delegate = self;
     self.recordButton.delegate = self;
-            [self hideBuildsIoBranding];
+    
+    [self hideBuildsIoBranding];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -181,7 +182,9 @@ static GBAEmulationViewController *_emulationViewController;
 {
 
     [super viewDidAppear:animated];
-        [self hideBuildsIoBranding];
+    
+    [self hideBuildsIoBranding];
+    
     if ([self isLaunchingApplication])
     {
         [self finishLaunchingApplication];
