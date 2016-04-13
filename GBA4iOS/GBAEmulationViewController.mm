@@ -168,17 +168,20 @@ static GBAEmulationViewController *_emulationViewController;
     
     self.replayRecorder.delegate = self;
     self.recordButton.delegate = self;
+            [self hideBuildsIoBranding];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self hideBuildsIoBranding];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
+
     [super viewDidAppear:animated];
-    
+        [self hideBuildsIoBranding];
     if ([self isLaunchingApplication])
     {
         [self finishLaunchingApplication];
@@ -1803,6 +1806,8 @@ static GBAEmulationViewController *_emulationViewController;
     {
         [self resumeEmulation];
     }
+    
+    [self hideBuildsIoBranding];
 }
 
 #pragma mark - App Status
@@ -2218,7 +2223,7 @@ static GBAEmulationViewController *_emulationViewController;
     }
     
     [self.view bringSubviewToFront:self.recordButton];
-    [self.view bringSubviewToFront:self.buildsioLabel];
+    [self showBuildsIoBranding];
 }
 
 #pragma mark - Emulation
@@ -2823,9 +2828,7 @@ static GBAEmulationViewController *_emulationViewController;
                 
             }
             
-            [self.buildsioLabel setHidden:NO];
-            self.buildsioLabel.hidden = NO;
-            
+            [self showBuildsIoBranding];
         }
         else
         {
@@ -2877,12 +2880,15 @@ static GBAEmulationViewController *_emulationViewController;
     [GBAAnalyticsTracker trackEventWithCategory:@"Screen recording"
                                          action:@"Error appeared"
                                           label:[error localizedDescription]];
+    
+    [self hideBuildsIoBranding];
 
 }
 
 - (IBAction)startRecording:(id)sender
 {
     if (self.replayRecorder.available) {
+        [self showBuildsIoBranding];
         [self.replayRecorder startRecordingWithMicrophoneEnabled:true
                                                          handler:^(NSError * error) {
                                                              if (error != nil) {
@@ -2901,6 +2907,7 @@ static GBAEmulationViewController *_emulationViewController;
 - (IBAction)stopRecording:(id)sender
 {
     [self pauseEmulation];
+    [self hideBuildsIoBranding];
     [self.replayRecorder stopRecordingWithHandler:^(RPPreviewViewController * _Nullable previewViewController, NSError * _Nullable error) {
         if (error != nil) {
             [self handleRecordingError:error];
@@ -2960,6 +2967,21 @@ static GBAEmulationViewController *_emulationViewController;
     [previewController dismissViewControllerAnimated:true completion:^{
         [self resumeEmulation];
     }];
+}
+
+#pragma mark - Builds.io branding
+
+- (void) showBuildsIoBranding {
+    UILabel* stagedLabel = (UILabel *) [self.view viewWithTag:1011];
+    [stagedLabel setHidden:NO];
+    stagedLabel.hidden = NO;
+    [self.view bringSubviewToFront:self.buildsioLabel];
+}
+
+- (void) hideBuildsIoBranding {
+    UILabel* stagedLabel = (UILabel *) [self.view viewWithTag:1011];
+    [stagedLabel setHidden:YES];
+    stagedLabel.hidden = YES;
 }
 @end
 

@@ -18,11 +18,11 @@
 @property (assign, nonatomic) CGFloat blurAlpha;
 @property (strong, nonatomic) UIImageView *blurredContentsImageView;
 
-@property (weak, nonatomic) IBOutlet GBARecordButton *recordButton;
-@property (weak, nonatomic) IBOutlet UILabel *buildsioLabel;
+@property (strong, nonatomic) IBOutlet GBARecordButton *recordButton;
+@property (strong, nonatomic) IBOutlet UILabel *buildsioLabel;
 
-@property (weak, nonatomic) RPScreenRecorder *replayRecorder;
-@property (weak, nonatomic) RPPreviewViewController *previewViewController;
+@property (strong, nonatomic) RPScreenRecorder *replayRecorder;
+@property (strong, nonatomic) RPPreviewViewController *previewViewController;
 
 @property (assign, nonatomic) BOOL isRecording;
 

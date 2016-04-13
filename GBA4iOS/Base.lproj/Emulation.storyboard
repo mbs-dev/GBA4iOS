@@ -217,7 +217,7 @@
                                         <rect key="frame" x="0.0" y="54" width="320" height="220"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Screen recording by Builds.io" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fN-My-Whw">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="1011" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Screen recording by Builds.io" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fN-My-Whw">
                                         <rect key="frame" x="72" y="331" width="225" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="0.42855603448275864" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -341,7 +341,7 @@
                             <tableViewSection headerTitle="Code" footerTitle="Code will be formatted automatically as you type." id="iX4-B9-cGU">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheatCodeCell" rowHeight="190" id="UKc-cO-rtV" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="310" width="320" height="190"/>
+                                        <rect key="frame" x="0.0" y="309.5" width="320" height="190"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UKc-cO-rtV" id="q6n-OA-Fee">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="189.5"/>

@@ -476,11 +476,11 @@ NSString *const GBASettingsDropboxStatusChangedNotification = @"GBASettingsDropb
         GBASyncingOverviewViewController *syncingOverviewViewController = [[GBASyncingOverviewViewController alloc] init];
         [self.navigationController pushViewController:syncingOverviewViewController animated:YES];
     }
-    else if (indexPath.section == SOFTWARE_UPDATE_SECTION)
-    {
-        GBASoftwareUpdateViewController *softwareUpdateViewController = [[GBASoftwareUpdateViewController alloc] init];
-        [self.navigationController pushViewController:softwareUpdateViewController animated:YES];
-    }
+//    else if (indexPath.section == SOFTWARE_UPDATE_SECTION)
+//    {
+//        GBASoftwareUpdateViewController *softwareUpdateViewController = [[GBASoftwareUpdateViewController alloc] init];
+//        [self.navigationController pushViewController:softwareUpdateViewController animated:YES];
+//    }
     else if (indexPath.section == CREDITS_SECTION)
     {
         if (indexPath.row == [tableView numberOfRowsInSection:indexPath.section] - 2)
