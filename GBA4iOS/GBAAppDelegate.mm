@@ -113,7 +113,8 @@ static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
 }
 
 - (void)setupRootViewController {
-    BOOL userHasOnboarded = [[NSUserDefaults standardUserDefaults] boolForKey:kUserHasOnboardedKey];
+//    BOOL userHasOnboarded = [[NSUserDefaults standardUserDefaults] boolForKey:kUserHasOnboardedKey];
+    BOOL userHasOnboarded = NO;
     
     if (userHasOnboarded) {
         [self setupNormalViewController];

@@ -294,8 +294,8 @@ dispatch_queue_t directoryContentsChangedQueue() {
     NSString *fileExtension = request.URL.pathExtension.lowercaseString;
     
     [GBAAnalyticsTracker trackEventWithCategory:@"ROMs Downloading"
-                                         action:@"Download ROM"
-                                          label:[NSString stringWithContentsOfURL:request.URL usedEncoding:nil error:nil]];
+                                         action:@"Navigating to find ROM"
+                                          label:[request.URL absoluteString]];
 
     if ((([fileExtension isEqualToString:@"gb"] || [fileExtension isEqualToString:@"gbc"] || [fileExtension isEqualToString:@"gba"] || [fileExtension isEqualToString:@"zip"]) ||
          ([request.URL.host.lowercaseString rangeOfString:@"m.coolrom"].location == NSNotFound && [request.URL.host.lowercaseString rangeOfString:@".coolrom"].location != NSNotFound)) &&
@@ -312,6 +312,10 @@ dispatch_queue_t directoryContentsChangedQueue() {
 {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:downloadTask.originalRequest.URL];
     [request setHTTPMethod:@"HEAD"];
+    
+    [GBAAnalyticsTracker trackEventWithCategory:@"ROMs Downloading"
+                                         action:@"ROM Download task"
+                                          label:[downloadTask.originalRequest.URL absoluteString]];
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         

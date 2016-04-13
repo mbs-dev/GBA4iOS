@@ -190,7 +190,7 @@
                                         <color key="value" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColorOff">
-                                        <color key="value" red="1" green="1" blue="1" alpha="0.18995150862068966" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="0.49509698275862069" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="circleColorOn">
                                         <color key="value" red="1" green="0.0" blue="0.0" alpha="0.65530711206896552" colorSpace="calibratedRGB"/>
@@ -220,7 +220,7 @@
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="1011" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Screen recording by Builds.io" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fN-My-Whw">
                                         <rect key="frame" x="72" y="331" width="225" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.42855603448275864" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
