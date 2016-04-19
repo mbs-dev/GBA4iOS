@@ -79,7 +79,7 @@ static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
     
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
-    [self preparePushNotifications];
+//    [self preparePushNotifications];  // Uncomment notifications when required
     
     [GBASettingsViewController registerDefaults];
     

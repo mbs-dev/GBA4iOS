@@ -977,21 +977,23 @@ dispatch_queue_t directoryContentsChangedQueue() {
 
 - (void)showNoGamesView
 {
-    UINib *noGamesViewNib = [UINib nibWithNibName:@"GBANoGamesView" bundle:nil];
-    UIView *view = [[noGamesViewNib instantiateWithOwner:self options:nil] firstObject];
-    
-    if (self.theme == GBAThemedTableViewControllerThemeTranslucent)
-    {
-        view.backgroundColor = [UIColor clearColor];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UINib *noGamesViewNib = [UINib nibWithNibName:@"GBANoGamesView" bundle:nil];
+        UIView *view = [[noGamesViewNib instantiateWithOwner:self options:nil] firstObject];
         
-        self.noGamesLabel.textColor = [UIColor whiteColor];
-        self.noGamesDescriptionLabel.textColor = [UIColor whiteColor];
-    }
-    
-    self.tableView.backgroundView = view;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    self.noGamesDescriptionLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.tableView.bounds) - (29 * 2);
+        if (self.theme == GBAThemedTableViewControllerThemeTranslucent)
+        {
+            view.backgroundColor = [UIColor clearColor];
+            
+            self.noGamesLabel.textColor = [UIColor whiteColor];
+            self.noGamesDescriptionLabel.textColor = [UIColor whiteColor];
+        }
+        
+        self.tableView.backgroundView = view;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
+        self.noGamesDescriptionLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.tableView.bounds) - (29 * 2);
+    });
 }
 
 - (void)hideNoGamesView

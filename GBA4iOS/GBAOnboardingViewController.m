@@ -48,16 +48,16 @@
 + (OnboardingViewController*)generateOnboardingViewControllerWithSkipHandler:(dispatch_block_t)skipHandler {
     NSArray<OnboardingContentViewController*> * pages = @[
       [OnboardingContentViewController contentWithTitle:@"Congratulations!"
-                                                   body:@"In your hands the incredible Gameboy emulator"
+                                                   body:@"In your hands is the incredible Gameboy emulator GBA4iOS"
                                                   image:[UIImage imageNamed:@"onboarding-welcome"]
                                              buttonText:nil
                                                  action:nil],
       
-      [OnboardingContentViewController contentWithTitle:@"Install ROMs easily"
-                                                   body:@"Choose from thousands of game ROMs online or upload them via Dropbox"
-                                                  image:[UIImage imageNamed:@"onboarding-roms"]
-                                             buttonText:nil
-                                                 action:nil],
+//      [OnboardingContentViewController contentWithTitle:@"Install ROMs easily"
+//                                                   body:@"Choose from thousands of game ROMs online or upload them via Dropbox"
+//                                                  image:[UIImage imageNamed:@"onboarding-roms"]
+//                                             buttonText:nil
+//                                                 action:nil],
       
       [OnboardingContentViewController contentWithTitle:@"Let's play"
                                                    body:@"Record gameplay screencasts and share them with friends"
@@ -65,14 +65,14 @@
                                              buttonText:nil
                                                  action:nil],
       
-      [OnboardingContentViewController contentWithTitle:@"Play truly"
-                                                   body:@"GBA4iOS supports a dozen of gamepads made specially for your iPhone. Just enable Bluetooth and pair your gamepad!"
+      [OnboardingContentViewController contentWithTitle:@"Play hard"
+                                                   body:@"GBA4iOS supports many gamepads made specifically for your iOS device"
                                                   image:[UIImage imageNamed:@"onboarding-gamepads"]
                                              buttonText:nil
                                                  action:nil],
       
-      [OnboardingContentViewController contentWithTitle:@"Join the cult"
-                                                   body:@"GBA4iOS brought to you by Builds.io. Install emulators on iOS with no jailbreak. Get support and join the great community!"
+      [OnboardingContentViewController contentWithTitle:@"Join the Club"
+                                                   body:@"GBA4iOS is brought to you by Builds.io. Join the great community!"
                                                   image:[UIImage imageNamed:@"onboarding-buildstore"]
                                              buttonText:@"Follow @builds_io"
                                                  action:^{

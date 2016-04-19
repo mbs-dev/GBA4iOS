@@ -40,8 +40,7 @@
 #define EXTERNAL_CONTROLLER_SECTION 11
 #define AIRPLAY_SECTION 12
 #define DROPBOX_SYNC_SECTION 13
-#define SOFTWARE_UPDATE_SECTION 14
-#define CREDITS_SECTION 15
+#define CREDITS_SECTION 14
 
 NSString *const GBASettingsDidChangeNotification = @"GBASettingsDidChangeNotification";
 NSString *const GBASettingsDropboxStatusChangedNotification = @"GBASettingsDropboxStatusChangedNotification";
@@ -476,11 +475,6 @@ NSString *const GBASettingsDropboxStatusChangedNotification = @"GBASettingsDropb
         GBASyncingOverviewViewController *syncingOverviewViewController = [[GBASyncingOverviewViewController alloc] init];
         [self.navigationController pushViewController:syncingOverviewViewController animated:YES];
     }
-//    else if (indexPath.section == SOFTWARE_UPDATE_SECTION)
-//    {
-//        GBASoftwareUpdateViewController *softwareUpdateViewController = [[GBASoftwareUpdateViewController alloc] init];
-//        [self.navigationController pushViewController:softwareUpdateViewController animated:YES];
-//    }
     else if (indexPath.section == CREDITS_SECTION)
     {
         if (indexPath.row == [tableView numberOfRowsInSection:indexPath.section] - 2)

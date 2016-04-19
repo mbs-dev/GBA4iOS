@@ -50,7 +50,7 @@
                             <tableViewSection headerTitle="Multiplayer" footerTitle="Linking allows you to use multiplayer features that normally require a Link Cable." id="EN5-5q-GTX">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="Bvg-Ir-Tff" detailTextLabel="C9H-Vq-fws" style="IBUITableViewCellStyleValue1" id="KHn-u9-ynz" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="223.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="224" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KHn-u9-ynz" id="CNf-hM-yKV">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -78,7 +78,7 @@
                             <tableViewSection headerTitle="Audio" footerTitle="Game music will only play if no other app is playing audio." id="BQC-TG-YXN">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SwitchCell" id="fFx-sp-PGc" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="333.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="334.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fFx-sp-PGc" id="fs9-Kb-Cvj">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -117,7 +117,7 @@
                                 <string key="footerTitle">A save state will be created whenever another save state is loaded, you quit the game, or the app crashes. This is intended to be used as a backup and not your primary saving method.</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SwitchCell" id="8RR-ty-VK7" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="443.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="445" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8RR-ty-VK7" id="Xtw-HB-Dfy">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -154,7 +154,7 @@
                             <tableViewSection headerTitle="Notifications" footerTitle="Get notified of new Event Distributions and Software Updates when they become available." id="N7e-LM-1A1">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="j5n-VH-SfQ" detailTextLabel="QJX-D8-fJ9" style="IBUITableViewCellStyleValue1" id="iou-Dm-7FE" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="569.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="571.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iou-Dm-7FE" id="yqd-SF-8Dj">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -182,7 +182,7 @@
                             <tableViewSection headerTitle="Original Game Boy  " footerTitle="Customize appearance of original Game Boy games." id="3QS-s6-Mol">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="L0P-0l-40q" detailTextLabel="lcU-P5-yPJ" style="IBUITableViewCellStyleValue1" id="tPO-Pj-yW2" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="679.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="682" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tPO-Pj-yW2" id="eHY-EL-Kpp">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -210,7 +210,7 @@
                             <tableViewSection headerTitle="Emulation" footerTitle="Play GBA4iOS animation when starting a new game." id="TL8-vo-bMg">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SwitchCell" id="fJm-oe-OpX" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="789.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="792.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fJm-oe-OpX" id="Fcf-rO-h9g">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -248,7 +248,7 @@
                                 <string key="footerTitle">Subsequent launches of the in-app web browser will return you to the previously loaded webpage, instead of the homepage. However, this may lead to increased memory usage.</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="AU0-rt-Yc9" detailTextLabel="wJt-pc-6cL" style="IBUITableViewCellStyleValue1" id="51T-0T-NIl" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="899.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="903" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51T-0T-NIl" id="0d2-Gx-Gye">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -272,7 +272,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SwitchCell" id="6ow-1F-cq6" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="943.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="947" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6ow-1F-cq6" id="Xre-Ss-ohY">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -309,7 +309,7 @@
                             <tableViewSection headerTitle="Controller Skins" id="6xa-Dc-Gfk" userLabel="Controller Skins">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DisclosureCell" textLabel="OHm-pT-NFJ" detailTextLabel="zFN-2i-CkL" style="IBUITableViewCellStyleValue1" id="O9w-bR-s3j" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1069.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1073.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O9w-bR-s3j" id="Cmt-mq-7Pc">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -333,7 +333,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="mcv-Gs-kLe" detailTextLabel="WhF-4t-XmH" style="IBUITableViewCellStyleValue1" id="dfL-Rt-5nZ" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1113.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1117.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dfL-Rt-5nZ" id="1pI-4Q-87i">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -361,7 +361,7 @@
                             <tableViewSection headerTitle="Controller Opacity" footerTitle="Determines how transparent the controller is, if supported by the skin." id="SNw-c2-3jm">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1T7-2h-GFx" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1199.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1203.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1T7-2h-GFx" id="GfQ-4T-6i1">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -406,7 +406,7 @@
                                 <string key="footerTitle">The device will vibrate whenever you press a button on the controller. Make sure vibrate is ON in the Settings app for ring, silent, or both, depending on which mode you're in.</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SwitchCell" id="Rw5-ep-vnl" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1309.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1314" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rw5-ep-vnl" id="UAY-2i-Zm8">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -443,7 +443,7 @@
                             <tableViewSection headerTitle="External Controller" id="s3c-lR-3lq" userLabel="Table View Section - External Controller">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="tNu-VX-c2N" detailTextLabel="czk-1N-GQI" style="IBUITableViewCellStyleValue1" id="m63-6B-cbj" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1435.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1440.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m63-6B-cbj" id="MZN-mS-ibJ">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -472,7 +472,7 @@
                                 <string key="footerTitle">When AirPlaying or connected via HDMI, the game will appear on the second screen, and the controller will remain on this device's screen.</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SwitchCell" id="Rvp-8R-LhQ" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1521.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1526.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rvp-8R-LhQ" id="OSd-6j-7Rm">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -511,7 +511,7 @@
                             <tableViewSection headerTitle="Syncing" id="Y91-iU-ZZA">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="bQm-NJ-XIL" detailTextLabel="xfN-uz-80c" style="IBUITableViewCellStyleValue1" id="qSk-zO-gSr" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1647.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1653" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qSk-zO-gSr" id="pzv-Oa-VmP">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -542,7 +542,7 @@
 For all the latest GBA4iOS updates, follow Riley Testut and Paul Thorsen.</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="uC9-4O-Vzb" detailTextLabel="c59-FU-Kqa" style="IBUITableViewCellStyleValue1" id="XIV-fF-qzJ" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1733.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1739" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XIV-fF-qzJ" id="kN7-gH-xdz">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -566,7 +566,7 @@ For all the latest GBA4iOS updates, follow Riley Testut and Paul Thorsen.</strin
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="yts-uQ-Fyu" detailTextLabel="qY9-bp-cXh" style="IBUITableViewCellStyleValue1" id="gY2-vs-EA6" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1777.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1783" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gY2-vs-EA6" id="oKP-Vh-IaR">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -590,7 +590,7 @@ For all the latest GBA4iOS updates, follow Riley Testut and Paul Thorsen.</strin
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="upY-mn-RKX" detailTextLabel="ZSt-Ue-ZUl" style="IBUITableViewCellStyleValue1" id="toN-EG-7ZZ" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1821.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1827" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="toN-EG-7ZZ" id="dhY-ye-el0">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -614,7 +614,7 @@ For all the latest GBA4iOS updates, follow Riley Testut and Paul Thorsen.</strin
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="XmL-5Z-36f" detailTextLabel="6nt-U1-98m" style="IBUITableViewCellStyleValue1" id="gM0-9q-VL9" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1865.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1871" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gM0-9q-VL9" id="thl-mL-RBx">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -638,7 +638,7 @@ For all the latest GBA4iOS updates, follow Riley Testut and Paul Thorsen.</strin
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="JKF-YX-hl9" detailTextLabel="oQI-aK-3wI" style="IBUITableViewCellStyleValue1" id="CaE-4j-s6R" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1909.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1915" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CaE-4j-s6R" id="alq-zA-gT4">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -662,7 +662,7 @@ For all the latest GBA4iOS updates, follow Riley Testut and Paul Thorsen.</strin
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="dc9-F6-nUc" detailTextLabel="kmR-d2-GDL" style="IBUITableViewCellStyleValue1" id="CyV-bM-CXP" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1953.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1959" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CyV-bM-CXP" id="vB1-Zu-WeS">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -686,7 +686,7 @@ For all the latest GBA4iOS updates, follow Riley Testut and Paul Thorsen.</strin
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="jj8-wN-xi5" detailTextLabel="kFC-aZ-ApX" style="IBUITableViewCellStyleValue1" id="6Qu-cw-7sV" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="1997.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="2003" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Qu-cw-7sV" id="nr7-8W-Vcd">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -710,7 +710,7 @@ For all the latest GBA4iOS updates, follow Riley Testut and Paul Thorsen.</strin
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CreditsCell" textLabel="JU5-45-kov" detailTextLabel="OzJ-JB-21Y" style="IBUITableViewCellStyleValue1" id="0cf-cy-9Ma" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="2041.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="2047" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0cf-cy-9Ma" id="HpY-hy-TbG">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -822,7 +822,7 @@ For all the latest GBA4iOS updates, follow Riley Testut and Paul Thorsen.</strin
                             <tableViewSection footerTitle="Receive a notification whenever an update to GBA4iOS is available for download." id="pnm-kB-mkb">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SwitchCell" id="J1n-Af-dTj" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="195.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="196" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J1n-Af-dTj" id="gAG-MB-SZN">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -861,7 +861,7 @@ For all the latest GBA4iOS updates, follow Riley Testut and Paul Thorsen.</strin
                                 <string key="footerTitle">To make sure GBA4iOS can check for new data and send push notifications, please make sure “Background App Refresh” is turned ON for GBA4iOS in the Settings app.</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Hny-dp-MQF" style="IBUITableViewCellStyleDefault" id="EFu-sZ-pWi" customClass="GBASettingsTableViewCell">
-                                        <rect key="frame" x="0.0" y="305.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="306.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EFu-sZ-pWi" id="lSS-NS-DZJ">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
